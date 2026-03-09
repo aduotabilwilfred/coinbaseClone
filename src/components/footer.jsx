@@ -163,7 +163,7 @@ const FooterSection = ({ title, links }) => (
 		<span className="text-[0.875rem] leading-5 font-semibold text-gray-100">{title}</span>
 		<div className="flex flex-col gap-2">
 			{links.map((link) => {
-				const isExternal = link.href.startsWith('http');
+				const isExternal = link.href?.startsWith('http');
 				return isExternal ? (
 					<a
 						key={link.label}

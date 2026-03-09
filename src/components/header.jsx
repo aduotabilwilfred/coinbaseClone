@@ -199,7 +199,7 @@ const DropdownContent = ({ menuKey }) => {
 							{hasSectionHeaders ? (
 								<>
 									{col.header && (
-										<NavSectionHeader href={col.header.href} className={col.header.href.startsWith('http') ? '_blank' : undefined}>
+										<NavSectionHeader href={col.header.href} className={col.header.href?.startsWith('http') ? '_blank' : undefined}>
 											{col.header.label}
 										</NavSectionHeader>
 									)}
@@ -208,7 +208,7 @@ const DropdownContent = ({ menuKey }) => {
 											<NavMenuItem
 												key={item.title}
 												{...item}
-												target={item.href.startsWith('http') ? '_blank' : undefined}
+												target={item.href?.startsWith('http') ? '_blank' : undefined}
 											/>
 										))}
 									</div>
