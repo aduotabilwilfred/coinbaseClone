@@ -1,20 +1,20 @@
 const Input = ({
-	placeholder = '',
-	type = 'email',
-	size = 'md',
-	className = '',
-	...props
+  placeholder = "",
+  type = "email",
+  size = "md",
+  className = "",
+  ...props
 }) => {
-	const sizes = {
-		md: 'px-4 py-3 text-body',
-		lg: 'px-8 py-6 text-[2rem]',
-	};
+  const sizes = {
+    md: "px-4 py-3 text-body",
+    lg: "px-8 py-6 text-[2rem]",
+  };
 
-	return (
-		<input
-			type={type}
-			placeholder={placeholder}
-			className={`
+  return (
+    <input
+      type={type}
+      placeholder={placeholder}
+      className={`
         w-full
         ${sizes[size] || sizes.md}
         rounded-xl
@@ -26,9 +26,9 @@ const Input = ({
         placeholder:text-gray-40
         ${className}
       `}
-			{...props}
-		/>
-	);
+      {...props}
+    />
+  );
 };
 
 export default Input;
