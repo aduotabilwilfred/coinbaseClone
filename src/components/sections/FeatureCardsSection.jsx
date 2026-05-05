@@ -24,7 +24,7 @@ const FeatureCardsSection = () => {
                     d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM12 18.25C15.4518 18.25 18.25 15.4518 18.25 12C18.25 8.54822 15.4518 5.75 12 5.75C8.54822 5.75 5.75 8.54822 5.75 12C5.75 15.4518 8.54822 18.25 12 18.25ZM12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
                   />
                 </svg>
-                Coinbase One
+                CryptoBase One
               </div>
               <h3 className="text-4xl lg:text-[48px] text-gray-100 mb-6 leading-[1.1] tracking-tight font-sans font-bold">
                 Zero trading fees,

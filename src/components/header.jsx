@@ -260,7 +260,7 @@ const MENUS = {
         },
         {
           icon: <OneIcon />,
-          title: "Coinbase One",
+          title: "CryptoBase One",
           desc: "Get zero trading fees and more",
           href: "https://coinbase.com/one?referrer=logged_out",
         },
@@ -298,7 +298,7 @@ const MENUS = {
         },
         {
           icon: <WealthIcon />,
-          title: "Coinbase Wealth",
+          title: "CryptoBase Wealth",
           desc: "Institutional-grade services for UHNW",
           href: "#",
         },
@@ -325,7 +325,7 @@ const MENUS = {
         />
       ),
       title: "System Update 2025",
-      description: "The next chapter of Coinbase. Live on X 12/17.",
+      description: "The next chapter of CryptoBase. Live on X 12/17.",
       linkText: "Learn more",
       href: "#",
     },
@@ -343,7 +343,7 @@ const MENUS = {
         {
           icon: <ListingsIcon />,
           title: "Asset Listings",
-          desc: "List your asset on Coinbase",
+          desc: "List your asset on CryptoBase",
           href: "#",
         },
       ],
@@ -456,7 +456,7 @@ const MENUS = {
   Developers: {
     cols: [
       {
-        header: { label: "Coinbase Developer Platform", href: "#" },
+        header: { label: "CryptoBase Developer Platform", href: "#" },
         items: [
           {
             icon: <EyeIcon />,
@@ -479,7 +479,7 @@ const MENUS = {
           {
             icon: <EarnIcon />,
             title: "Stablecoins",
-            desc: "Access USDC and Coinbase Custom Stablecoins",
+            desc: "Access USDC and CryptoBase Custom Stablecoins",
             href: "#",
           },
         ],
@@ -517,7 +517,7 @@ const MENUS = {
         />
       ),
       title: "World class crypto infrastructure.",
-      description: "Discover Coinbase's complete crypto-as-a-service platform.",
+      description: "Discover CryptoBase's complete crypto-as-a-service platform.",
       linkText: "Learn more",
       href: "#",
     },
@@ -541,7 +541,7 @@ const MENUS = {
         {
           icon: <NewsIcon />,
           title: "Blog",
-          desc: "Read the latest from Coinbase",
+          desc: "Read the latest from CryptoBase",
           href: "#",
         },
       ],
@@ -570,11 +570,11 @@ const MENUS = {
       image: (
         <img
           src="https://static-assets.coinbase.com/growth/acquisition/global-nav/upsell/company_upsell.png"
-          alt="About Coinbase"
+          alt="About CryptoBase"
           className="w-full h-full object-cover"
         />
       ),
-      title: "Learn all about Coinbase:",
+      title: "Learn all about CryptoBase:",
       description: "We're building the open financial system.",
       linkText: "Create your account",
       href: "#",
@@ -704,11 +704,10 @@ const Header = () => {
                   <a
                     href="#"
                     onMouseEnter={() => handleEnter(link)}
-                    className={`text-label-1 px-3 py-2.5 rounded-lg transition-colors whitespace-nowrap ${
-                      activeMenu === link
+                    className={`text-label-1 px-3 py-2.5 rounded-lg transition-colors whitespace-nowrap ${activeMenu === link
                         ? "text-blue-60 bg-gray-5"
                         : "text-gray-100 hover:bg-gray-5"
-                    }`}
+                      }`}
                   >
                     {link}
                   </a>

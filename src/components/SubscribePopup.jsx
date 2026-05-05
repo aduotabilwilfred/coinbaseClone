@@ -41,7 +41,7 @@ export default function SubscribePopup({ onClose }) {
                 You have subscribed
               </h3>
               <p className="text-gray-60 mt-2">
-                Thanks for subscribing to Coinbase Bytes.
+                Thanks for subscribing to CryptoBase Bytes.
               </p>
               <Button
                 onClick={onClose}
@@ -54,7 +54,7 @@ export default function SubscribePopup({ onClose }) {
           ) : (
             <div className="flex flex-col items-center transition-opacity duration-500">
               <h3 className="mb-2 text-3xl font-display font-medium text-black">
-                Keep learning with Coinbase Bytes
+                Keep learning with CryptoBase Bytes
               </h3>
               <p className="mb-6 text-gray-60 text-lg">
                 The most important crypto news, sent to your inbox.
@@ -78,7 +78,7 @@ export default function SubscribePopup({ onClose }) {
               </form>
               <p className="mt-6 text-xs text-gray-50 leading-relaxed">
                 By submitting your email address, you are signing up to receive
-                Coinbase Bytes communications to your inbox. For information on
+                CryptoBase Bytes communications to your inbox. For information on
                 how we use your data see{" "}
                 <a
                   href="https://www.coinbase.com/legal/privacy"

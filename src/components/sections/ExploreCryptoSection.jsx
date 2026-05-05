@@ -18,12 +18,20 @@ const ExploreCryptoSection = () => {
                   cryptocurrencies.
                 </p>
 
-                <Link
-                  to="/explore"
-                  className="inline-flex text-white items-center justify-center px-12 py-6 text-[2rem] rounded-full bg-black font-semibold no-underline border-none cursor-pointer transition-opacity duration-150 hover:opacity-[0.88]"
-                >
-                  See more assets
-                </Link>
+                <div className="flex flex-wrap gap-4">
+                  <Link
+                    to="/explore"
+                    className="inline-flex text-white items-center justify-center px-12 py-6 text-[2rem] rounded-full bg-black font-semibold no-underline border-none cursor-pointer transition-opacity duration-150 hover:opacity-[0.88]"
+                  >
+                    See more assets
+                  </Link>
+                  <Link
+                    to="/create-crypto"
+                    className="inline-flex text-white items-center justify-center px-12 py-6 text-[2rem] rounded-full bg-black font-semibold no-underline border-none cursor-pointer transition-opacity duration-150 hover:opacity-[0.88]"
+                  >
+                    Create Cryptocurrency
+                  </Link>
+                </div>
               </div>
             </div>
 

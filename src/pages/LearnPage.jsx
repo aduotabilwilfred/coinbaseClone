@@ -27,7 +27,7 @@ export default function LearnPage() {
     { title: "What is cryptocurrency?", label: "Beginner's Guide" },
     { title: "How to earn crypto rewards", label: "Getting Started" },
     {
-      title: "How to add crypto to your Coinbase Wallet",
+      title: "How to add crypto to your CryptoBase Wallet",
       label: "Getting Started",
     },
     {
@@ -225,7 +225,7 @@ export default function LearnPage() {
   const allThingsWallet = [
     {
       label: "Wallet",
-      title: "What’s the difference between Coinbase and Coinbase Wallet?",
+      title: "What’s the difference between CryptoBase and CryptoBase Wallet?",
       description:
         "And how can a wallet help me access NFTs or DeFi? Your self-custody wallet questions, answered",
       image:
@@ -242,18 +242,18 @@ export default function LearnPage() {
     },
     {
       label: "Getting Started",
-      title: "How to add crypto to your Coinbase Wallet",
+      title: "How to add crypto to your CryptoBase Wallet",
       description:
-        "A quick guide on how to add crypto to your Coinbase self-custody wallet.",
+        "A quick guide on how to add crypto to your CryptoBase self-custody wallet.",
       image:
         "https://images.ctfassets.net/q5ulk4bp65r7/3G50jPNvtkBsSz7we9TaxK/a50e3a2103bad2af0355644349e57476/how_to_fund_coinbase_wallet.png?w=768&fm=png",
       href: "#",
     },
     {
       label: "Wallet",
-      title: "How to send or receive crypto using Coinbase Wallet",
+      title: "How to send or receive crypto using CryptoBase Wallet",
       description:
-        "Coinbase Wallet helps you unlock one of the most significant features of crypto: the ability to send or receive peer-to-peer transfers without any financial intermediaries.",
+        "CryptoBase Wallet helps you unlock one of the most significant features of crypto: the ability to send or receive peer-to-peer transfers without any financial intermediaries.",
       image:
         "https://images.ctfassets.net/q5ulk4bp65r7/4ktmMla57tgU3ZYleBOlLm/71ef298196ffcf1d1eb6d2b43abe49d4/Learn_Illustration_How_to_Send_Crypto.png?w=768&fm=png",
       href: "#",
@@ -386,11 +386,10 @@ export default function LearnPage() {
                 <a
                   key={i}
                   href="#"
-                  className={`px-5 py-3 bg-white rounded-lg shadow-sm border border-transparent hover:border-gray-20 transition-all text-[15px] font-medium ${
-                    item.label === "Crypto wallet"
+                  className={`px-5 py-3 bg-white rounded-lg shadow-sm border border-transparent hover:border-gray-20 transition-all text-[15px] font-medium ${item.label === "Crypto wallet"
                       ? "text-blue-60"
                       : "text-black hover:text-blue-60"
-                  }`}
+                    }`}
                 >
                   {item.label}
                 </a>

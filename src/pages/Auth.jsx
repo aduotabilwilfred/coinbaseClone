@@ -45,7 +45,7 @@ export const SignIn = () => {
 
       <div className="w-full max-w-[420px] mt-10 animate-fade-in-up stagger-1">
         <h1 className="text-3xl font-bold mb-8 text-center font-display">
-          Sign in to Coinbase
+          Sign in to CryptoBase
         </h1>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -87,11 +87,10 @@ export const SignIn = () => {
             variant="primary"
             type="submit"
             disabled={isLoading || !email || !password}
-            className={`w-full py-5 text-xl font-bold rounded-full ${
-              isLoading || !email || !password
+            className={`w-full py-5 text-xl font-bold rounded-full ${isLoading || !email || !password
                 ? "bg-blue-60/20 text-white/50 cursor-not-allowed"
                 : "bg-blue-60 text-white hover:opacity-90 cursor-pointer"
-            }`}
+              }`}
           >
             {isLoading ? "Signing in..." : "Continue"}
           </Button>
@@ -172,7 +171,7 @@ export const SignUpForm = () => {
         to="/"
         className="mb-12 self-start md:ml-12 lg:ml-20 animate-fade-in-up"
       >
-        <img src={coinbaseLogo} alt="Coinbase" className="h-10" />
+        <img src={coinbaseLogo} alt="CryptoBase" className="h-10" />
       </Link>
 
       <div className="w-full max-w-[500px] animate-fade-in-up stagger-1">
@@ -212,7 +211,7 @@ export const SignUpForm = () => {
             <input
               type="email"
               className="w-full px-4 py-3 border border-cds-gray-10 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-60 font-sans transition-all hover:border-gray-20"
-              placeholder="otabilwilfred@coinbase.com"
+              placeholder="[EMAIL_ADDRESS]"
             />
           </div>
           <div>
@@ -254,7 +253,7 @@ export const SignUpForm = () => {
 
         <div className="mt-8 text-center pb-20">
           <p className="text-gray-60 font-sans">
-            Already have a Coinbase account?{" "}
+            Already have a CryptoBase account?{" "}
             <Link
               to="/signin"
               className="text-blue-60 font-bold hover:underline"
@@ -300,7 +299,7 @@ export const EmailSignUp = () => {
       >
         <img
           src={coinbaseLogo}
-          alt="Coinbase"
+          alt="CryptoBase"
           className="h-8 invert brightness-0"
         />
       </Link>
@@ -310,7 +309,7 @@ export const EmailSignUp = () => {
           Create your account
         </h1>
         <p className="text-gray-40 mb-8 font-sans">
-          Access all that Coinbase has to offer with a single account.
+          Access all that CryptoBase has to offer with a single account.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -367,11 +366,10 @@ export const EmailSignUp = () => {
             variant="primary"
             type="submit"
             disabled={isLoading || !name || !email || !password}
-            className={`w-full py-5 text-xl font-bold rounded-full ${
-              isLoading || !name || !email || !password
+            className={`w-full py-5 text-xl font-bold rounded-full ${isLoading || !name || !email || !password
                 ? "bg-blue-60/20 text-white/50 cursor-not-allowed"
                 : "bg-blue-60 text-white hover:opacity-90 cursor-pointer"
-            }`}
+              }`}
           >
             {isLoading ? "Creating account..." : "Continue"}
           </Button>
@@ -486,7 +484,7 @@ export const SignUpSelection = () => {
       >
         <img
           src={coinbaseLogo}
-          alt="Coinbase"
+          alt="CryptoBase"
           className="h-8 invert brightness-0"
         />
       </Link>

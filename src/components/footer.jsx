@@ -39,7 +39,7 @@ const COLUMNS = [
           { label: "Explore", href: "/explore" },
           { label: "Market statistics", href: "/market-stats" },
           {
-            label: "Coinbase Bytes newsletter",
+            label: "CryptoBase Bytes newsletter",
             href: "https://www.coinbase.com/bytes",
           },
           { label: "Crypto basics", href: "/learn/crypto-basics" },
@@ -95,7 +95,7 @@ const COLUMNS = [
             href: "https://www.coinbase.com/learning-rewards",
           },
           { label: "Base App", href: "https://base.app" },
-          { label: "Coinbase One", href: "https://www.coinbase.com/one" },
+          { label: "CryptoBase One", href: "https://www.coinbase.com/one" },
           { label: "Debit Card", href: "https://www.coinbase.com/card" },
         ],
       },
@@ -107,7 +107,7 @@ const COLUMNS = [
             href: "https://www.coinbase.com/listings",
           },
           {
-            label: "Coinbase Business",
+            label: "CryptoBase Business",
             href: "https://www.coinbase.com/business",
           },
           { label: "Payments", href: "https://www.coinbase.com/payments" },
@@ -360,7 +360,7 @@ const FooterSection = ({ title, links }) => (
 const CoinbaseLogo = ({ height = 60 }) => (
   <img
     src="https://static-assets.coinbase.com/ui-infra/illustration/v1/pictogram/svg/light/coinbaseLogoNavigation-4.svg"
-    alt="Coinbase"
+    alt="CryptoBase"
     height={height}
     style={{ height: `${height}px`, width: "auto", display: "block" }}
   />
@@ -404,7 +404,7 @@ const Footer = () => {
                 href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                title={`Coinbase ${s.label} page`}
+                title={`CryptoBase ${s.label} page`}
                 className="opacity-100 hover:opacity-70 transition-opacity duration-150"
               >
                 <img
@@ -423,7 +423,7 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
             <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
               <p className="text-[0.8125rem] leading-5 text-gray-100 m-0">
-                © {new Date().getFullYear()} Coinbase
+                © {new Date().getFullYear()} CryptoBase
               </p>
               <span className="text-gray-40 text-[0.8125rem]">•</span>
               <a

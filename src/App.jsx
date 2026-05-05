@@ -16,6 +16,7 @@ import ExplorePage from "./pages/ExplorePage";
 import MarketStatsPage from "./pages/MarketStatsPage";
 import LearnPage from "./pages/LearnPage";
 import CryptoBasicsPage from "./pages/CryptoBasicsPage";
+import CreateCryptoPage from "./pages/CreateCryptoPage";
 import Loader from "./components/ui/Loader";
 
 const Home = () => (
@@ -56,6 +57,7 @@ const App = () => {
       <Route path="/learn" element={<LearnPage />} />
       <Route path="/learn/crypto-basics" element={<CryptoBasicsPage />} />
       <Route path="/profile" element={<ProfilePage />} />
+      <Route path="/create-crypto" element={<CreateCryptoPage />} />
     </Routes>
   );
 };

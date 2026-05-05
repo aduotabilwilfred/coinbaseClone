@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
+import { getNewListings } from "../services/api";
 
-const tabs = ["Tradable", "Top gainers", "New on Coinbase"];
+const tabs = ["Tradable", "Top gainers", "New on CryptoBase"];
 const POLL_MS = 3000;
 const FALLBACK_GHS = 16.5;
 
@@ -196,6 +197,7 @@ const CryptoTable = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [ghsRate, setGhsRate] = useState(FALLBACK_GHS);
+  const [backendNewListings, setBackendNewListings] = useState([]);
 
   const applyTickers = useCallback(
     (tickers) => {
@@ -259,7 +261,21 @@ const CryptoTable = () => {
           try {
             const fx = await fxRes.json();
             setGhsRate(fx?.usd?.ghs ?? FALLBACK_GHS);
-          } catch {}
+          } catch { }
+        }
+
+        try {
+          const { data } = await getNewListings();
+          setBackendNewListings(data.map(c => ({
+            ...c,
+            id: c._id,
+            current_price: c.price * (fxRes?.ok ? (ghsRate || FALLBACK_GHS) : FALLBACK_GHS),
+            price_change_percentage_24h: c.change24h,
+            dir: null,
+            v: 0
+          })));
+        } catch (err) {
+          console.warn("Failed to fetch backend new listings:", err);
         }
 
         if (!cancelled) {
@@ -286,13 +302,16 @@ const CryptoTable = () => {
       try {
         const tickers = await fetchPrices();
         applyTickers(tickers);
-      } catch {}
+      } catch { }
     }, POLL_MS);
 
     return () => clearInterval(id);
   }, [loading, error, fetchPrices, applyTickers]);
 
-  const allCoins = COIN_META.map((c) => coinsMap[c.binance]).filter(Boolean);
+  const allCoins = [
+    ...backendNewListings.map(c => ({ ...c, isBackend: true })),
+    ...COIN_META.map((c) => coinsMap[c.binance]).filter(Boolean)
+  ];
 
   const getTabData = (tab) => {
     if (!allCoins.length) return [];
@@ -307,8 +326,8 @@ const CryptoTable = () => {
               b.price_change_percentage_24h - a.price_change_percentage_24h,
           )
           .slice(0, 6);
-      case "New on Coinbase":
-        return allCoins.slice(14, 20);
+      case "New on CryptoBase":
+        return allCoins.filter(c => c.isBackend || allCoins.slice(-10).some(bc => bc.id === c.id)).slice(0, 6);
       default:
         return [];
     }
@@ -335,10 +354,9 @@ const CryptoTable = () => {
 									flex items-center justify-center px-4 h-10 min-w-[100px]
 									border-none rounded-full whitespace-nowrap
 									text-label-1 cursor-pointer transition-all duration-200
-									${
-                    isActive
-                      ? "bg-white text-gray-100"
-                      : "bg-transparent text-gray-40 hover:bg-white/10 hover:text-white"
+									${isActive
+                    ? "bg-white text-gray-100"
+                    : "bg-transparent text-gray-40 hover:bg-white/10 hover:text-white"
                   }
 								`}
               >
